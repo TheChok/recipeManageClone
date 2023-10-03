@@ -1,0 +1,30 @@
+package com.make.manage.service;
+
+import org.springframework.stereotype.Service;
+
+import com.make.manage.dto.MemberDTO;
+import com.make.manage.repository.MemberRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberServiceImpl implements MemberService {
+	private final MemberRepository memberRepository;
+	
+	// 회원가입 처리
+	@Override
+	public int save(MemberDTO memberDTO) {
+		return memberRepository.save(memberDTO);
+	}
+	
+	// 로그인 처리
+	@Override
+	public boolean login(MemberDTO memberDTO) {
+		MemberDTO loginMember = memberRepository.login();
+		return false;
+	}
+	
+	
+	
+}

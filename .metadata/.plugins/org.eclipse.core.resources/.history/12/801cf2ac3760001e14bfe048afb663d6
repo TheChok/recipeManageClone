@@ -1,0 +1,9 @@
+package com.make.manage.repository;
+
+import com.make.manage.dto.MemberDTO;
+
+public interface MemberRepository {
+
+	int save(MemberDTO memberDTO);
+
+}

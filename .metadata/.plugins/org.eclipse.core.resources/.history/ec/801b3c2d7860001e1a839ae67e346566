@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>update</title>
+</head>
+<body>
+
+	<form action="/member/update" method="post" name="updateForm">
+		id=""
+	</form>
+	
+	
+</body>
+</html>

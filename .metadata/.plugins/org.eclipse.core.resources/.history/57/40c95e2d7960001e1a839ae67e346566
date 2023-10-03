@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>update</title>
+</head>
+<body>
+
+	<form action="/member/update" method="post" name="updateForm">
+		<table style="text-align:left;">
+			<tr>
+				<th>id</th>
+				<td><input type="text" name="id" 			value="${member.id }" 			leadonly/></td>
+			</tr>
+			<tr>
+				<th>email</th>
+				<td><input type="text" name="memberEmail" 	value="${member.memberEmail }" 	leadonly/></td>
+			</tr>
+			<tr>
+				<th>password</th>
+				<td>${member.memberPassword }</td>
+			</tr>
+			<tr>
+				<th>name</th>
+				<td>${member.memberName }</td>
+			</tr>
+			<tr>
+				<th>age</th>
+				<td>${member.memberAge }</td>
+			</tr>
+			<tr>
+				<th>mobile</th>
+				<td>${member.memberMobile }</td>
+			</tr>
+		</table>
+		id:			
+		email:		
+		password:	<input type="text" name="memberPassword" 	id="memberPassword"/>
+		name:		<input type="text" name="memberName" 	value="${member.memberName }" 	leadonly/>
+		age:		<input type="text" name="memberAge" 	value="${member.memberAge }"/>
+		mobile:		<input type="text" name="memberMobile" 	value="${member.memberMobile }"/>
+		<input type="button" value="수정" onclick="update()" />
+	</form>
+	
+</body>
+</html>

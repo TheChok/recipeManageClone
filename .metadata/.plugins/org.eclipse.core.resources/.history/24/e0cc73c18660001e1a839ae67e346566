@@ -1,0 +1,69 @@
+package com.make.manage.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.make.manage.dto.MemberDTO;
+import com.make.manage.repository.MemberRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberServiceImpl implements MemberService {
+	private final MemberRepository memberRepository;
+	
+	// 회원가입 처리
+	@Override
+	public int save(MemberDTO memberDTO) {
+		return memberRepository.save(memberDTO);
+	}
+	
+	// 로그인 처리
+	@Override
+	public boolean login(MemberDTO memberDTO) {
+		MemberDTO loginMember = memberRepository.login(memberDTO);
+		if(loginMember != null) return true;
+		else					return false;
+	}
+	
+	// 회원목록 출력
+	@Override
+	public List<MemberDTO> findAll() {
+		return memberRepository.findAll();
+	}
+	
+	// 회원 상세페이지
+	@Override
+	public MemberDTO findById(Long id) {
+		return memberRepository.findById(id);
+	}
+	
+	// 회원정보 삭제
+	@Override
+	public void delete(Long id) {
+		memberRepository.delete(id);
+	}
+	
+	// 회원정보 조회(수정페이지)
+	@Override
+	public MemberDTO findByMemberEmail(String loginEmail) {
+		return memberRepository.findByMemberEmail(loginEmail);
+	}
+	
+	// 회원정보 수정
+	@Override
+	public boolean update(MemberDTO memberDTO) {
+		return memberRepository.update(memberDTO);
+	}
+	
+	// 회원 이메일 검증
+	@Override
+	public String emailCheck(String memberEmail) {
+		return 
+	}
+	
+	
+	
+}

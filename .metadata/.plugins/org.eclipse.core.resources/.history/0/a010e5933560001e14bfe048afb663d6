@@ -1,0 +1,6 @@
+package com.make.manage.dto;
+
+
+public class MemberDTO {
+	
+}

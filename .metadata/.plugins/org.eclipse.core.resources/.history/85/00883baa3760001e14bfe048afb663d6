@@ -1,0 +1,5 @@
+package com.make.manage.repository;
+
+public interface MemberRepository {
+
+}

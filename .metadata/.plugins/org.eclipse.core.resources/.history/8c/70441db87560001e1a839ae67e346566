@@ -1,0 +1,53 @@
+package com.make.manage.repository;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.make.manage.dto.MemberDTO;
+
+import lombok.RequiredArgsConstructor;
+
+@Repository
+@RequiredArgsConstructor
+public class MemberRepositoryImpl implements MemberRepository {
+	private final SqlSessionTemplate sql;
+	private String namespace = "Member.";
+	
+	//회원가입
+	@Override
+	public int save(MemberDTO memberDTO) {
+		//System.out.println("memberDTO = " + memberDTO);
+		return sql.insert(namespace + "save", memberDTO);
+	}
+	
+	//로그인 처리
+	@Override
+	public MemberDTO login(MemberDTO memberDTO) {
+		return sql.selectOne(namespace + "login", memberDTO);
+	}
+	
+	// 회원목록 출력
+	@Override
+	public List<MemberDTO> findAll() {
+		return sql.selectList(namespace + "findAll");
+	}
+	
+	// 회원 상세페이지
+	@Override
+	public MemberDTO findById(Long id) {
+		return sql.selectOne(namespace + "findById", id);
+	}
+	
+	// 회원정보 삭제
+	@Override
+	public void delete(Long id) {
+		
+		
+	}
+	
+	
+	
+	
+}

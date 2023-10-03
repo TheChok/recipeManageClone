@@ -1,0 +1,11 @@
+package com.make.manage.controller;
+
+public class MultiTester {
+
+	public static void main(String[] args) {
+		Test1();
+	}
+	
+	
+	
+}

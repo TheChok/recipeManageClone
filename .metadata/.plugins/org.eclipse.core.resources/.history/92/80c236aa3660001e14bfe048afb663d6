@@ -1,0 +1,5 @@
+package com.make.manage.service;
+
+public class MemberServiceImpl implements MemberService {
+
+}

@@ -1,0 +1,11 @@
+package com.make.manage.service;
+
+import com.make.manage.dto.MemberDTO;
+
+public interface MemberService {
+	// 회원 가입
+	int save(MemberDTO memberDTO);
+
+	boolean login(MemberDTO memberDTO);
+
+}

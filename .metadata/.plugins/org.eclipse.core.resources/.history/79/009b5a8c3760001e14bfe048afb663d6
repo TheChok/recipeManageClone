@@ -1,0 +1,15 @@
+package com.make.manage.service;
+
+import org.springframework.stereotype.Service;
+
+import com.make.manage.repository.MemberRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberServiceImpl implements MemberService {
+	private final MemberRepository memberRepository;
+	
+	
+}

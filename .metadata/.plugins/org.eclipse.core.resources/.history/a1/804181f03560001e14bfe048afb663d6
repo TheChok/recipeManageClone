@@ -1,0 +1,17 @@
+package com.make.manage.dto;
+
+// MemberDTO //
+public class MemberDTO {
+	//DTO
+	private Long	id;
+	private String 	memberEmail;
+	private String 	memberPassWord;
+	private String 	memberName;
+	private Integer memberAge;
+	private String 	memberMobile;
+	
+	
+	
+	
+	
+} // end - MemberDTO

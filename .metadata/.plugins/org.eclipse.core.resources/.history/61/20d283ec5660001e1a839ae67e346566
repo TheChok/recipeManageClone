@@ -1,0 +1,12 @@
+package com.make.manage.repository;
+
+import com.make.manage.dto.MemberDTO;
+
+public interface MemberRepository {
+	//회원가입
+	int save(MemberDTO memberDTO);
+
+	// 로그인 처리
+	MemberDTO login(MemberDTO memberDTO);
+
+}
